@@ -14,7 +14,7 @@ public:
 		days = 0;
 	}
 
-	trip(string str, int number):name(str), days(number) {}
+	trip(string str, int number) :name(str), days(number) {}
 	~trip() {}
 	string get_name() { return name; }
 	int get_days() { return days; }
@@ -26,9 +26,9 @@ private:
 	int one_day_price;
 	int travel_price;
 public:
-	rest_abroad():trip(), one_day_price(0), travel_price(0) {}
-	rest_abroad(string str1, int kst, int price1, int price2) : trip(str1, kst), one_day_price(price1), travel_price(price2){}
-	~rest_abroad(){}
+	rest_abroad() :trip(), one_day_price(0), travel_price(0) {}
+	rest_abroad(string str1, int kst, int price1, int price2) : trip(str1, kst), one_day_price(price1), travel_price(price2) {}
+	~rest_abroad() {}
 	int day_price() { return one_day_price; }
 	int travel_pr() { return travel_price; }
 	int total_price() { return (travel_price + one_day_price * days); }
@@ -45,7 +45,7 @@ public:
 
 void input(rest_abroad** p, int n) {
 	for (int i = 0; i < n; i++) {
-		cout << "Enter City Number " << i+1 << endl;
+		cout << "Enter City Number " << i + 1 << endl;
 		string s;
 		int d, d_price, b_price;
 		cout << "Name of city: "; cin >> s;
@@ -75,7 +75,7 @@ void sort_print(rest_abroad** p, int n) {
 }
 
 int main() {
-	rest_abroad **p;
+	rest_abroad** p;
 	int kst;
 	cout << "Enter amounts of trips: ";cin >> kst;
 	cout << endl;
