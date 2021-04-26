@@ -33,12 +33,6 @@ public:
 	int travel_pr() { return travel_price; }
 	int total_price() { return (travel_price + one_day_price * days); }
 
-	rest_abroad(rest_abroad& obj) {
-		this->name = obj.name;
-		this->days = obj.days;
-		this->one_day_price = obj.one_day_price;
-		this->travel_price = obj.travel_price;
-	}
 	rest_abroad operator=(rest_abroad& obj) {
 		this->name = obj.name;
 		this->days = obj.days;
